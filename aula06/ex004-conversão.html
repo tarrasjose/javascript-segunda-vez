@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aprendizado: Usar ${}, conversão para maiúsculas, minúsculas, dois decimais, ponto para vírgula e moeda</h1>
+
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras <br>` )
+
+        document.write(`Seu nome com letras maiúsculas escreve assim: ${nome.toUpperCase()} <br>`)
+
+        document.write(`Seu nome com letras minúsculas escreve assim: ${nome.toLowerCase()}`)
+
+        /*
+        Convertendo para dois decimais e de ponto para virgúla:
+
+        > var salario = 5550.90
+        undefined
+
+        > salario
+        5550.9
+
+        > salario.toFixed(2)
+        '5550.90'
+
+        > salario.toFixed(2).replace('.',',')
+        '5550,90'
+
+        > salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        'R$ 5.550,90'
+
+        > salario.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})
+        'US$ 5.550,90'
+
+        > salario.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})
+        '€ 5.550,90'
+        */
+
+    </script>
+</body>
+</html>
