@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #output {
+        #area {
             font: normal 18px arial;
             color: white;
             background: green;
@@ -18,23 +18,23 @@
     </style>
 </head>
 <body>
-    <h1>Eventos DOM</h1>
-    <div id="output" onmouseenter="entrar()" onmouseout="sair()" onclick="clicar()">Interaja aqui</div>
+    <h1>DOM</h1>
+    <div id="area" onmouseenter="entrar()" onmouseout="sair()" onclick="clicar()">Interaja...</div>
     <script>
-        var interaja = document.getElementById('output')
+        var a = document.querySelector('#area')
+
         function entrar() {
-            interaja.innerHTML = 'Entrou!'
+            a.innerHTML = 'Entrou'
         }
         function sair() {
-            interaja.innerHTML = 'Saiu!'
-            interaja.style.background = 'green'
+            a.innerHTML = 'Saiu!'
+            a.style.background = 'green'
         }
         function clicar() {
-            interaja.innerHTML = 'Clicou!'
-            interaja.style.background = 'red'
+            a.innerHTML = 'Clicou!'
+            a.style.background = 'red'
         }
-        
+
     </script>
-    
 </body>
 </html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>votação</title>
+    <style>
+        * {
+            margin: 5px;
+            padding: 0px;
+        }
+        body {
+            font: normal 18pt arial; 
+        }
+        input {
+            font: normal 18px arial;
+            width: 100px;
+            border-radius: 5px;
+        }
+        button {
+            font: normal 18px arial;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        header {
+            min-height: 130px;
+            margin: auto;
+            padding-top: 30px;
+            text-align: center;  
+        }
+        main {
+            background-color:#070707eb;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+            width: 650px;
+            height: 230px;
+            margin: auto;
+            border-radius: 10px 10px 10px 10px;
+            
+        }
+        main > h1 {
+            color:rgba(0, 42, 255, 0.611);
+        }
+        header > p {
+            color: rgba(0, 42, 255, 0.926);
+        }
+       
+     
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sou obrigado a votar? </h1>
+        <p><strong>Descubra!</strong></p>
+    </header>
+    <main>
+        <h1>Descubra agora:</h1>
+        Digite a sua idade: <input type="number" name="txtidad" id="txtidad">
+        <button onclick="verificar()">Verificar</button>
+        <button onclick="limpar()">Limpar</button>
+        <div id="res"></div>
+    </main>
+
+    <script>
+        
+        function verificar(){
+            var ida = document.getElementById('txtidad')
+            var res = document.getElementById('res')
+            var idade = Number(ida.value)
+
+            if(idade < 16) {
+                res.innerHTML = `<p>Você tem ${idade} anos. <strong>NÃO VOTA!</strong></p>`
+            } else if( idade < 18 || idade >= 65) {
+                res.innerHTML = `<p>Você tem ${idade} anos. <strong>VOTO OPCIONAL!</strong></p>`
+            } else {
+                res.innerHTML = `<p>Você tem ${idade} anos. <strong>VOTO OBRIGATÓRIO!</strong></p>`
+            }
+        }
+
+        function limpar(){
+            res.innerHTML= ''
+            document.getElementById('txtidad').value = ''
+        }
+        
+
+    </script>
+</body>
+</html>
